@@ -1,0 +1,118 @@
+/* Certifications Section Styles */
+#certifications {
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+}
+
+.certifications-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.certification-item {
+  display: flex;
+  gap: 2rem;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.certification-content {
+  flex: 1;
+}
+
+.certification-header h3 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.issuer {
+  display: block;
+  font-weight: 600;
+  color: #3498db;
+  margin-bottom: 0.3rem;
+}
+
+.date {
+  display: block;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.certification-details {
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.certification-details li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  list-style-type: none;
+}
+
+.certification-details li:before {
+  content: '•';
+  color: #3498db;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.certification-image {
+  flex: 0 0 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.certification-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.credential-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #3498db;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.credential-link:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .certification-item {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .certification-image {
+    flex: 1;
+    order: -1; /* Mueve la imagen arriba en móviles */
+  }
+  
+  .certification-image img {
+    width: 100%;
+  }
+}
