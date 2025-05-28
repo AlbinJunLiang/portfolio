@@ -17,7 +17,7 @@ document.querySelectorAll("nav a").forEach(anchor => {
 function descargarPDF() {
     const enlace = document.createElement("a");
     enlace.href = "data:application/pdf;base64," + pdf;
-    enlace.download = "archivo.pdf";
+    enlace.download = "Albin Liang - Software Developer CV.pdf";
     enlace.click();
 }
 
