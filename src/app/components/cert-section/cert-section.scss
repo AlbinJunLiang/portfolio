@@ -1,0 +1,141 @@
+#certification {
+    --ink: #1f2937;
+    --ink-muted: #5b6472;
+    --line: #eaeaea;
+    --bg: #fbfffa;
+    --card-bg: #ffffff;
+    --tag-bg: #eff3fa;
+    --tag-color: #2563eb;
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
+    --shadow-hover: 0 12px 32px rgba(15, 23, 42, 0.12);
+
+    padding: 4rem 25px;
+    background: var(--bg);
+    margin: 0 auto 3rem;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--ink);
+}
+
+.certification-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+
+.certification-title {
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    color: var(--ink);
+    margin: 0 0 0.5rem;
+}
+
+.certification-subtitle {
+    color: var(--ink-muted);
+    font-size: 1rem;
+    margin: 0;
+}
+
+
+.certification-container {
+    display: flex;
+    flex-direction: column;
+    /* <- clave: apila las tarjetas verticalmente */
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    /* espacio entre tarjetas */
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+.credentials {
+  padding: 3rem 1.5rem;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.credentials__grid {
+  max-width: 2000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.credential-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.credential-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.credential-card__logo {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.credential-card__title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+  color: #14161a;
+}
+
+.credential-card__issuer {
+  font-size: 0.9rem;
+  color: #5c606a;
+  margin: 0;
+}
+
+.credential-card__date {
+  font-size: 0.8rem;
+  color: #9a9fa8;
+  margin: 0.15rem 0 1.25rem;
+}
+
+.credential-card__button {
+  margin-top: auto;
+  background: #14161a;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.4rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.credential-card__button:hover {
+  background: #2a2d33;
+}
+
+/* Móvil: apilado en una sola columna */
+@media (max-width: 900px) {
+  .credentials__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .credential-card__logo {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+}

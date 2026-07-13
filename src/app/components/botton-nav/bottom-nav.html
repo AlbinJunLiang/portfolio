@@ -1,0 +1,51 @@
+<nav class="bottom-nav" [class.hidden]="isHidden()">
+  <button (click)="sectionService.scrollTo('home')" class="nav-btn" mat-icon-button>
+    <span class="nav-icon" [class.active]="isActiveSection('home')"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+        height="24" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+          <path d="M5 12H3l9-9l9 9h-2M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" />
+          <path d="M9 21v-6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v6" />
+        </g>
+      </svg></span>
+    <span class="icon-text" [class.active]="isActiveSection('home')"> {{'TOOLBAR.HOME' | translate}}
+    </span>
+  </button>
+  <button (click)="sectionService.scrollTo('about')" class="nav-btn" mat-icon-button>
+    <span class="nav-icon" [class.active]="isActiveSection('about')"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+        height="24" viewBox="0 0 24 24">
+        <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+          <path d="M16 9a4 4 0 1 1-8 0a4 4 0 0 1 8 0m-2 0a2 2 0 1 1-4 0a2 2 0 0 1 4 0" />
+          <path
+            d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1M3 12c0 2.09.713 4.014 1.908 5.542A8.99 8.99 0 0 1 12.065 14a8.98 8.98 0 0 1 7.092 3.458A9 9 0 1 0 3 12m9 9a8.96 8.96 0 0 1-5.672-2.012A6.99 6.99 0 0 1 12.065 16a6.99 6.99 0 0 1 5.689 2.92A8.96 8.96 0 0 1 12 21" />
+        </g>
+      </svg></span>
+    <span class="icon-text" [class.active]="isActiveSection('about')"> {{'TOOLBAR.ABOUT_ME' | translate}}
+    </span>
+  </button>
+
+
+  <button (click)="sectionService.scrollTo('projects')" class="nav-btn" mat-icon-button>
+    <span class="nav-icon" [class.active]="isActiveSection('projects')">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+        <path fill="currentColor" fill-rule="evenodd"
+          d="m256 34.347l192 110.851v221.703L256 477.752L64 366.901V145.198zM106.666 192.001v150.266l128 73.9V265.902zm298.667.001l-128 73.9v150.265l128-73.9zM256 83.614l-125.867 72.67L256 228.952l125.867-72.67z" />
+      </svg>
+    </span>
+
+    <span class="icon-text" [class.active]="isActiveSection('projects')">
+      {{'TOOLBAR.PROJECTS' | translate}}
+    </span>
+  </button>
+
+  <button (click)="sectionService.scrollTo('contact')" class="nav-btn" mat-icon-button>
+    <span class="nav-icon" [class.active]="isActiveSection('contact')">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path fill="currentColor"
+          d="m20 8l-8 5l-8-5V6l8 5l8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2" />
+      </svg>
+    </span>
+    <span class="icon-text" [class.active]="isActiveSection('contact')">
+      {{'TOOLBAR.CONTACT' | translate}}
+    </span>
+  </button>
+</nav>

@@ -1,0 +1,45 @@
+<section class="hero-container" id="home" [sectionObserver]="'home'">
+    <div class="hero-content">
+        <h2 style="font-size: 45px; margin-bottom: 0; margin-top: 5px;">Albin Liang Cen</h2>
+        <h3> {{'HERO_SECTION.ROLE' | translate}}
+        </h3>
+
+        <p>{{displayTextService.displayedText()}}</p>
+
+        <div class="hero-actions">
+            <button (click)="goToLink('https://www.linkedin.com/in/albin-liang-878140232/')" mat-stroked-button
+                class="linkedin-button">
+
+                <span class="button-content">
+                    <img src="icons/linkedin.svg" alt="LinkedIn" class="toolbar-icon">
+                    <span>LinkedIn</span>
+                </span>
+
+            </button>
+
+            <button matTooltip="{{'HERO_SECTION.DOWNLOAD_CV' | translate}}" (click)="downloadCV()" mat-stroked-button
+                class="cv-button">
+                @if(isLoading()){
+                <mat-spinner class="spinner-green" diameter="20"></mat-spinner>
+                } @else {
+                <mat-icon>picture_as_pdf</mat-icon>
+
+                }
+                <span [hidden]="isLoading()">{{'HERO_SECTION.RESUME' | translate}}</span>
+
+            </button>
+
+        </div>
+    </div>
+
+    <!-- Imagen decorativa (opcional) -->
+    <div class="hero-image">
+        @if(languageService.isThisLanguage('EN')){
+        <img src="flowchart-en.svg" alt="Ilustración tecnológica">
+
+        }@else {
+        <img src="flowchart-es.svg" alt="Ilustración tecnológica">
+
+        }
+    </div>
+</section>

@@ -1,0 +1,72 @@
+{
+  "TOOLBAR": {
+    "HOME": "Inicio",
+    "PROFILE": "Perfil",
+    "CONTACT": "Contacto",
+    "PROJECTS": "Proyectos",
+    "ABOUT_ME": "Acerca de mi",
+    "EXPERIENCE": "Experiencia"
+  },
+  "HERO_SECTION": {
+    "DISPLAY_TEXT": "Especializado en desarrollo de software, análisis de datos e inteligencia de negocios.",
+    "RESUME": "Currículum",
+    "ROLE": "Ingeniero de Software + BI",
+    "DOWNLOAD_CV": "Descargar Currículum"
+  },
+  "ABOUT_ME": {
+    "TITLE": "Acerca de mi",
+    "MY_DESCRIPTION: ": "I am a Software Engineer with experience working in ecosystems such as",
+    "AND": "and",
+    "TECH_STACK": "Tecnologías"
+  },
+  "PROJECTS": {
+    "SUBTITLE": "Algunas cosas que he construido últimamente.",
+    "WEBSITE": "SITIO WEB",
+    "REPOSITORY": "Repositorio",
+    "GENQ_DESCRIPTION": "GenQ es una aplicación web educativa desarrollada para digitalizar contenido académico y reducir el uso de material físico en los procesos de aprendizaje. La plataforma permite a los usuarios crear, gestionar y compartir cuestionarios, incorporando funcionalidades de inteligencia artificial para generar preguntas automáticamente. Esta solución facilita la creación de evaluaciones, optimiza el tiempo de elaboración de contenido educativo y mejora la accesibilidad de los recursos de aprendizaje.",
+    "GENQ_TITLE": "Un aplicación web educativa",
+    "SHAPPER_TITLE": "Plataforma de Comercio Electrónico",
+    "SHAPPER_DESCRIPTION": "Shapper es una aplicación web de comercio electrónico desarrollada para una repostería que buscaba crear una tienda en línea para promocionar y vender sus productos a través de internet. La plataforma incorpora funcionalidades como catálogo de productos, gestión y seguimiento de pedidos, además de un módulo administrativo para gestionar usuarios y productos. Actualmente, la aplicación se encuentra en proceso de adaptación a una arquitectura multi-tenant y se han implementado mejoras como almacenamiento de archivos, integración de pasarelas de pago con tarjeta y autenticación mediante proveedores externos.",
+    "SWEET_ONION_TITLE": "Chatbot conversacional",
+    "SWEET_ONION_DESCRIPTION": "SweetOnion es una interfaz de usuario (frontend) de inteligencia artificial diseñada para unificar e integrar APIs, LLMs y sistemas RAG, facilitando su consumo y experimentación. El ecosistema incluye una API REST que gestiona la selección de proveedores, modelos, contextos e instrucciones, junto con un panel gráfico interactivo que permite administrar las configuraciones de los modelos, registrar el historial de conversaciones en una base de datos y realizar pruebas en tiempo real."
+  },
+  "CERTIFICATIONS": {
+    "CERTIFICATIONS_TITLE": "Certificaciones y Cursos",
+    "CERTIFICATIONS_SUBTITLE": "Algunas cursos realizado recientemente.",
+    "VIEW_CREDENTIAL": "Ver credencial"
+  },
+  "EXPERIENCE": {
+    "TITLE": "Experiencia"
+  },
+  "MONTHS": {
+    "JANUARY": "Enero",
+    "FEBRUARY": "Febrero",
+    "MARCH": "Marzo",
+    "APRIL": "Abril",
+    "MAY": "Mayo",
+    "JUNE": "Junio",
+    "JULY": "Julio",
+    "AUGUST": "Agosto",
+    "SEPTEMBER": "Septiembre",
+    "OCTOBER": "Octubre",
+    "NOVEMBER": "Noviembre",
+    "DECEMBER": "Diciembre"
+  },
+  "CONTACT": {
+    "TITLE": "Contáctame",
+    "DESCRIPTION": "Envíeme un mensaje por correo electrónico.",
+    "NAME": "Nombre",
+    "EMAIL": "Correo electrónico",
+    "SUBJECT": "Asunto",
+    "MESSAGE": "Tu mensaje",
+    "SEND_ME": "Enviar mensaje",
+    "EMAIL_REQUIRED": "Tu correo electrónico es necesario.",
+    "EMAIL_FORMAT": "Formato de correo electrónico incorrecto.",
+    "MAX_LENGTH": "No puede superar los {{max}} caracteres.",
+    "REQUIRED": "El campo {{field}} es necesario.",
+    "MESSAGE_SEND_SUCCESS": "¡Mensaje enviado!"
+  },
+  "FOOTER": {
+    "AI_DISCLAIMER": "* Algunas imágenes han sido generadas o asistidas por Inteligencia Artificial."
+  }
+}

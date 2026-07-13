@@ -1,0 +1,73 @@
+// Include theming for Angular Material with `mat.theme()`.
+// This Sass mixin will define CSS variables that are used for styling Angular Material
+// components according to the Material 3 design spec.
+// Learn more about theming and how to use it for your application's
+// custom components at https://material.angular.dev/guide/theming
+@use '@angular/material' as mat;
+
+html {
+  height: 100%;
+  @include mat.theme((color: (primary: mat.$azure-palette,
+        // Paleta azulada
+        tertiary: mat.$blue-palette,
+      ),
+      typography: Roboto,
+      density: 0,
+    ));
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  /* Esto elimina la barra de scroll horizontal */
+}
+
+/* You can add global styles to this file, and also import other style files */
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+}
+
+
+.custom-snackbar .mdc-snackbar__surface {
+  background: #004d2e !important;
+}
+
+.custom-snackbar .mdc-snackbar__label {
+  color: #ffffff !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  font-family: 'Inter', Courier, monospace !important;
+}
+
+/* TEXTO DEL ACTION */
+.custom-snackbar .mat-mdc-snack-bar-action,
+.custom-snackbar .mat-mdc-snack-bar-action .mdc-button__label {
+  color: #ffffff !important;
+}
+
+/* QUITA EFECTO BLANCO */
+.custom-snackbar .mat-mdc-button-persistent-ripple::before,
+.custom-snackbar .mat-mdc-button-persistent-ripple::after {
+  background: transparent !important;
+  opacity: 0 !important;
+}
+
+/* HOVER */
+.custom-snackbar .mat-mdc-snack-bar-action:hover {
+  background-color: rgba(251, 251, 255, 0.12) !important;
+  border-radius: 6px;
+}

@@ -1,0 +1,139 @@
+<section id="experience" id="experience" [sectionObserver]="'experience'">
+    <div class="experience-intro">
+        <h2 class="experience-title">{{'EXPERIENCE.TITLE'|translate}}</h2>
+    </div>
+
+    <div class="experience-container">
+
+        <article class="experience-item">
+            <div class="experience-header">
+                <img class="company-logo" src="experience/prodhab.jpg" alt="Acción Social, Universidad de Costa Rica" />
+                <div class="experience-header-text">
+                    <h3>IT Intern</h3>
+                    <span class="company">PRODHAB</span>
+                    <span class="date">{{'MONTHS.AUGUST'| translate}} 2025 – {{'MONTHS.NOVEMBER'| translate}}
+                        2025</span>
+                </div>
+            </div>
+            <ul [hidden]="!languageService.isThisLanguage('EN')" class="experience-details">
+                <li>
+                    Creation of educational tools to promote awareness of Costa Rica's Law 8968 (Law for the Protection
+                    of Individuals Regarding the Processing of Their Personal Data).
+                </li>
+                <li>
+                    Proposal of web-based recreational video games, such as quizzes, matching games, and word searches.
+                </li>
+                <li>
+                    Development of encapsulated HTML modules and components to integrate them into the website without
+                    interfering with its original functionality.
+                </li>
+            </ul>
+
+            <ul [hidden]="!languageService.isThisLanguage('ES')" class="experience-details">
+                <li>
+                    Creación de herramientas educativas para promover el conocimiento de la Ley 8968 de Costa Rica (Ley
+                    de Protección de la Persona frente al Tratamiento de sus Datos Personales).
+                </li>
+                <li>
+                    Propuesta de videojuegos recreativos en formato web, como cuestionarios, juegos de parejas y sopas
+                    de letras.
+                </li>
+                <li>
+                    Desarrollo de módulos y componentes HTML encapsulados para integrarlos en la página sin interferir
+                    con su funcionamiento original.
+                </li>
+            </ul>
+
+        </article>
+
+
+        <article class="experience-item">
+            <div class="experience-header">
+                <img class="company-logo" src="experience/ucr.jpeg" alt="Acción Social, Universidad de Costa Rica" />
+                <div class="experience-header-text">
+                    <h3>Full-Stack Developer</h3>
+                    <span class="company">Acción Social, Universidad de Costa Rica</span>
+                    <span class="date">{{'MONTHS.AUGUST'| translate}} 2024 – {{'MONTHS.SEPTEMBER'| translate}}
+                        2025</span>
+                </div>
+            </div>
+
+
+            <ul [hidden]="!languageService.isThisLanguage('EN')" class="experience-details">
+                <li>
+                    Digitized the Costa Rica Driving Manual content into a web application with interactive quizzes and
+                    a service catalog for a driving school.
+                </li>
+                <li>
+                    Developed frontend features for exam simulations, progress tracking, and an administrator module
+                    with authentication-based access control using Supabase.
+                </li>
+                <li>
+                    Deployed the website with client and administrator modules, including the theoretical driving manual
+                    content.
+                </li>
+            </ul>
+
+            <ul [hidden]="!languageService.isThisLanguage('ES')" class="experience-details">
+                <li>
+                    Digitalización del contenido del Manual de Conducción de Costa Rica en una aplicación web con
+                    cuestionarios interactivos y catálogo de servicios para una escuela de manejo.
+                </li>
+                <li>
+                    Desarrollo de funcionalidades frontend para simulacros de examen, seguimiento de progreso y módulo
+                    administrador con control de acceso mediante autenticación usando Supabase.
+                </li>
+                <li>
+                    Despliegue del sitio web con módulos de cliente y administrador, incluyendo el contenido del manual
+                    teórico de conducción.
+                </li>
+            </ul>
+        </article>
+
+        <!-- Experiencia 2 -->
+        <article class="experience-item">
+            <div class="experience-header">
+                <img class="company-logo" src="experience/ucr.jpeg" alt="DeliciasLyn" />
+                <div class="experience-header-text">
+                    <h3>Full-Stack Developer</h3>
+                    <span class="company">Universidad de Costa Rica</span>
+                    <span class="date">{{'MONTHS.AUGUST'| translate}} 2024 – {{'MONTHS.DECEMBER'| translate}}
+                        2024</span>
+                </div>
+            </div>
+
+            <ul [hidden]="!languageService.isThisLanguage('ES')" class="experience-details">
+                <li>
+                    Asesoramiento a una PYME mediante la implementación de soluciones de comercio electrónico.
+                </li>
+                <li>
+                    Trabajo colaborativo en la construcción de módulos para la gestión de productos, carrito de compras
+                    y seguimiento de pedidos.
+                </li>
+                <li>
+                    Automatización de procesos como solicitudes de órdenes y envío de correos electrónicos, además del
+                    despliegue de la aplicación en una VPS.
+                </li>
+            </ul>
+
+            <ul [hidden]="!languageService.isThisLanguage('EN')" class="experience-details">
+                <li>
+                    Provided consulting services to a small business through the implementation of e-commerce solutions.
+                </li>
+                <li>
+                    Collaborated in the development of modules for product management, shopping cart functionality, and
+                    order tracking.
+                </li>
+                <li>
+                    Automated processes such as order requests and email notifications, as well as deployed the
+                    application on a VPS.
+                </li>
+            </ul>
+
+
+        </article>
+
+    </div>
+
+
+</section>

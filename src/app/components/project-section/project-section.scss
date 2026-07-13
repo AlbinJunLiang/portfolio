@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+
+/* Projects Section */
+#projects {
+    --ink: #1f2937;
+    --ink-muted: #5b6472;
+    --line: #eaeaea;
+    --bg: #ffffff;
+    --card-bg: #ffffff;
+    --tag-bg: #eff3fa;
+    --tag-color: #0f3714;
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
+    --shadow-hover: 0 12px 32px rgba(15, 23, 42, 0.12);
+
+    padding: 4rem 25px;
+    background: var(--bg);
+    margin: 0 auto 3rem;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--ink);
+}
+
+.projects-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.projects-title {
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    color: var(--ink);
+    margin: 0 0 0.5rem;
+}
+
+.projects-subtitle {
+    color: var(--ink-muted);
+    font-size: 1rem;
+    margin: 0;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    /* <- clave: apila las tarjetas verticalmente */
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    /* espacio entre tarjetas */
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* ---------- Card ---------- */
+.project-card {
+    width: 100%;
+    max-width: 1300px;
+    border-radius: 18px !important;
+    border: 1px solid var(--line) !important;
+    box-shadow: var(--shadow) !important;
+    background: var(--card-bg) !important;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.project-card:hover {
+    box-shadow: var(--shadow-hover) !important;
+    transform: translateY(-3px);
+}
+
+/* Avatar del header (logo circular con <img>) */
+.project-header-image {
+    width: 40px;
+    height: 40px;
+
+    overflow: hidden;
+    flex-shrink: 0;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+.project-card mat-card-title {
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--ink);
+}
+
+.project-card mat-card-subtitle {
+    color: var(--ink-muted);
+    font-size: 0.9rem;
+}
+
+.project-card mat-card-content p {
+    color: var(--ink-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0.75rem 0 0;
+}
+
+/* ---------- Tech tags ---------- */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background-color: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 0.35rem 0.85rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.tech-tag:hover {
+    background-color: #dfe9fb;
+}
+
+.tech-icon {
+    width: 1em;
+    height: 1em;
+}
+
+/* ---------- Botones ---------- */
+.project-card mat-card-actions {
+    display: flex;
+    gap: 0.75rem;
+    border-top: 1px solid var(--line);
+}
+
+.project-card mat-card-actions button {
+    letter-spacing: 0.02em;
+    color: var(--accent);
+}
+
+.project-card mat-card-actions button:hover {
+    color: var(--accent-hover);
+}
+
+
+
+@media (min-width: 769px) {
+    .project-card {
+        display: grid;
+        grid-template-columns: 1.15fr 1fr;
+        grid-template-rows: auto 1fr auto auto;
+        grid-template-areas:
+            "header  image"
+            "content image"
+            "tags    image"
+            "actions image";
+        gap: 0;
+    }
+
+    .project-card mat-card-header {
+        grid-area: header;
+        padding: 1.75rem 1.75rem 0.5rem;
+    }
+
+    .project-card mat-card-content {
+        grid-area: content;
+        padding: 0 1.75rem;
+    }
+
+    .project-card .tech-tags {
+        grid-area: tags;
+        padding: 0 1.75rem;
+        margin: 1rem 0;
+    }
+
+    .project-card mat-card-actions {
+        grid-area: actions;
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+        align-items: center;
+        /* centra verticalmente */
+    }
+
+    .project-card img[mat-card-image] {
+        grid-area: image;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin: 0;
+        min-height: 380px;
+    }
+}
+
+/* ---------- Layout mobile: header → imagen → texto → tags → acciones ---------- */
+@media (max-width: 768px) {
+    .project-card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .project-card mat-card-header {
+        order: 1;
+        padding: 1.25rem 1.5rem;
+        padding-bottom: 5px;
+    }
+
+    .project-card img[mat-card-image] {
+        order: 2;
+    }
+
+    .project-card mat-card-content {
+        order: 3;
+        padding: 1rem 1.5rem 0;
+    }
+
+    .project-card .tech-tags {
+        order: 4;
+        padding: 0 1.5rem;
+        margin: 1rem 0;
+    }
+
+    .project-card mat-card-actions {
+        order: 5;
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    }
+
+    .project-card img[mat-card-image] {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin: 0;
+    }
+}
+
+@media (min-width: 769px) {
+    .project-card--reverse {
+        grid-template-columns: 1fr 1.15fr;
+        /* imagen | contenido */
+        grid-template-areas:
+            "image  header"
+            "image  content"
+            "image  tags"
+            "image  actions";
+    }
+}
+
+
+@media (min-width: 769px) {
+
+    .project-card img[mat-card-image],
+    .project-card app-slider {
+        grid-area: image;
+        width: 100%;
+        height: 100%;
+        min-height: 380px;
+        margin: 0;
+    }
+
+    .project-card img[mat-card-image] {
+        object-fit: cover;
+    }
+
+    .project-card app-slider {
+        height: 100%;
+        min-height: 480px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .project-card img[mat-card-image],
+    .project-card app-slider {
+        order: 2;
+        width: 100%;
+        height: 220px;
+        margin: 0;
+    }
+}
+
+
+
+.github-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 0 16px !important;
+    color: black !important;
+}
+
+.btn-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-content img {
+    width: 20px;
+    height: 20px;
+    display: block;
+}

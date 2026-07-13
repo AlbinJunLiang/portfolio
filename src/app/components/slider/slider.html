@@ -1,0 +1,26 @@
+<div class="slider">
+    <div [hidden]="true" (click)="goToPrevious()" class="arrow left">‹</div>
+    <div [hidden]="true" (click)="goToNext()" class="arrow right">›</div>
+
+    <div class="slides-overflow"
+         #overflowEl
+         (pointerdown)="onPointerDown($event, overflowEl)"
+         (pointermove)="onPointerMove($event)"
+         (pointerup)="onPointerUp()"
+         (pointercancel)="onPointerUp()">
+
+        <div class="slides-container" [ngStyle]="slidesContainerStyles()">
+            @for (slide of slides(); track $index) {
+                <div class="slide" [ngStyle]="getStyle(slide)"></div>
+            }
+        </div>
+    </div>
+
+    <div class="dot-container">
+        @for (slide of slides(); track $index) {
+            <div class="dot" [class.active]="$index === currentIndex()" (click)="goSlide($index)">
+                •
+            </div>
+        }
+    </div>
+</div>

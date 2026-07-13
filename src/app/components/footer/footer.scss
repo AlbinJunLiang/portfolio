@@ -1,0 +1,127 @@
+.footer {
+  background: #004d2e;
+  color: #e4e6eb;
+  padding: 3rem 1.5rem 1.5rem;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Marca */
+.footer__name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+  letter-spacing: -0.01em;
+}
+
+.footer__role {
+  font-size: 0.9rem;
+  color: #9a9fa8;
+  margin: 0;
+}
+
+/* Navegación */
+.footer__nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer__nav button {
+  background: none;
+  border: none;
+  color: #c7cad1;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  transition: color 0.2s ease;
+}
+
+.footer__nav button:hover {
+  color: #ffffff;
+}
+
+/* Redes sociales */
+.footer__social {
+  display: flex;
+  gap: 0.9rem;
+  justify-self: start;
+}
+
+@media (min-width: 640px) {
+  .footer__social {
+    justify-self: end;
+  }
+}
+
+.footer__social-link {
+  color: #c7cad1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.footer__social-link:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Línea inferior */
+.footer__bottom {
+  max-width: 1100px;
+  margin: 2.5rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(24, 22, 22, 0.06);
+  text-align: center;
+}
+
+.footer__bottom p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #f3f4f5;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer__container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer__nav ul {
+    align-items: center;
+  }
+
+  .footer__social {
+    width: 100%;
+    justify-self: center;
+    justify-content: center;
+  }
+}
+
+.footer__disclaimer {
+    font-size: 0.75rem; // Más pequeño que el texto principal
+    color: #888;       // Un gris suave para que no distraiga
+    font-style: italic;
+    margin-top: 20px !important;
+}

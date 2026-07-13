@@ -1,0 +1,72 @@
+{
+  "TOOLBAR": {
+    "HOME": "Home",
+    "PROFILE": "Profile",
+    "CONTACT": "Contact",
+    "PROJECTS": "Projects",
+    "ABOUT_ME": "About me",
+    "EXPERIENCE": "Experience"
+  },
+  "HERO_SECTION": {
+    "DISPLAY_TEXT": "Specialized in software development, data analysis, and business intelligence.",
+    "RESUME": "Resume",
+    "ROLE": "Software Engineer + BI",
+    "DOWNLOAD_CV": "Download resume"
+  },
+  "ABOUT_ME": {
+    "TITLE": "About me",
+    "MY_DESCRIPTION: ": "I am a Software Engineer with experience working in ecosystems such as",
+    "AND": "and",
+    "TECH_STACK": "Tech Stack"
+  },
+  "PROJECTS": {
+    "SUBTITLE": "Some things I've built lately.",
+    "WEBSITE": "WEBSITE",
+    "REPOSITORY": "Repository",
+    "GENQ_DESCRIPTION": "GenQ is an educational web application developed to digitize academic content and reduce the use of physical materials in learning processes. The platform allows users to create, manage, and share quizzes while incorporating artificial intelligence features to automatically generate questions. This solution simplifies assessment creation, optimizes the time required to prepare educational content, and improves access to learning resources.",
+    "GENQ_TITLE": "An educational WebApp",
+    "SHAPPER_TITLE": "E-Commerce Platform",
+    "SHAPPER_DESCRIPTION": "Shapper is an e-commerce web application developed for a bakery that wanted to create an online store to promote and sell its products through the web. The platform includes features such as product catalog management, order tracking, and an administrative module for managing users and products. The application is currently being adapted to a multi-tenant architecture, with improvements including file storage integration, card payment gateway support, and authentication through external providers.",
+    "SWEET_ONION_TITLE": "Conversational Chatbot",
+    "SWEET_ONION_DESCRIPTION": "SweetOnion is an artificial intelligence user interface (frontend) designed to unify and integrate APIs, LLMs, and RAG systems, facilitating their consumption and experimentation. The ecosystem includes a REST API that manages the selection of providers, models, contexts, and instructions, along with an interactive graphical panel to manage model configurations, log conversation history in a database, and perform real-time tests."
+  },
+  "CERTIFICATIONS": {
+    "CERTIFICATIONS_TITLE": "Certifications and Courses",
+    "CERTIFICATIONS_SUBTITLE": "Recently completed courses and certifications.",
+    "VIEW_CREDENTIAL": "View Credential"
+  },
+  "EXPERIENCE": {
+    "TITLE": "Experience"
+  },
+  "MONTHS": {
+    "JANUARY": "January",
+    "FEBRUARY": "February",
+    "MARCH": "March",
+    "APRIL": "April",
+    "MAY": "May",
+    "JUNE": "June",
+    "JULY": "July",
+    "AUGUST": "August",
+    "SEPTEMBER": "September",
+    "OCTOBER": "October",
+    "NOVEMBER": "November",
+    "DECEMBER": "December"
+  },
+  "CONTACT": {
+    "TITLE": "Contact Me",
+    "DESCRIPTION": "Send me a message through my email.",
+    "NAME": "Name",
+    "EMAIL": "Email",
+    "SUBJECT": "Subject",
+    "MESSAGE": "Your message",
+    "SEND_ME": "Send message!",
+    "EMAIL_REQUIRED": "Your Email is required.",
+    "EMAIL_FORMAT": "The Email is invalid.",
+    "MAX_LENGTH": "Cannot exceed {{max}} characters.",
+    "REQUIRED": "Your {{field}} is required.",
+    "MESSAGE_SEND_SUCCESS": "¡Message sent successfully!"
+  },
+  "FOOTER": {
+    "AI_DISCLAIMER": "* Some images were generated or assisted by Artificial Intelligence."
+  }
+}

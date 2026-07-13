@@ -1,0 +1,26 @@
+<section id="certification">
+    <div class="certification-intro">
+        <h2 class="certification-title">{{'CERTIFICATIONS.CERTIFICATIONS_TITLE'|translate}}</h2>
+        <p class="certification-subtitle">{{'CERTIFICATIONS.CERTIFICATIONS_SUBTITLE'|translate}}</p>
+    </div>
+
+    <div class="certification-container">
+
+        <div class="credentials__grid">
+            @for (credential of credentials(); track credential.title) {
+            <article class="credential-card">
+                <img class="credential-card__logo" [src]="credential.image" [alt]="credential.issuer" />
+
+                <h3 class="credential-card__title">{{ credential.title }}</h3>
+                <p class="credential-card__issuer">{{ credential.issuer }}</p>
+                <p class="credential-card__date">{{ credential.date }}</p>
+
+                <button type="button" class="credential-card__button" (click)="viewCredential(credential.url)">
+                    {{'CERTIFICATIONS.VIEW_CREDENTIAL'|translate}} </button>
+            </article>
+            }
+        </div>
+    </div>
+
+
+</section>

@@ -1,0 +1,68 @@
+<mat-toolbar color="primary">
+    <div class="logo-container">
+        <img src="logo.png" alt="GenQ" class="logo-app" draggable="false" />
+        <span class="app-name">Albin Liang</span>
+    </div>
+
+    <div class="center-buttons">
+        <button (click)="sectionService.scrollTo('home')" [class.active]="sectionService.activeSection() === 'home'"
+            class="center-button" mat-button>
+            {{'TOOLBAR.HOME' | translate}}
+        </button>
+
+        <button (click)="sectionService.scrollTo('about')" class="center-button"
+            [class.active]="sectionService.activeSection() === 'about'" mat-button>
+            {{'TOOLBAR.ABOUT_ME' | translate}}
+        </button>
+
+
+        <button (click)="sectionService.scrollTo('projects')" class="center-button"
+            [class.active]="sectionService.activeSection() === 'projects'" mat-button> {{'TOOLBAR.PROJECTS' |
+            translate}}
+        </button>
+
+        <button class="center-button" mat-button [class.active]="sectionService.activeSection() === 'experience'"
+            (click)="sectionService.scrollTo('experience')">
+            {{'TOOLBAR.EXPERIENCE' | translate}}
+        </button>
+
+        <button (click)="sectionService.scrollTo('contact')" class="center-button"
+            [class.active]="sectionService.activeSection() === 'contact'" mat-button> {{'TOOLBAR.CONTACT' | translate}}
+        </button>
+
+
+    </div>
+
+    <div class="right-icons">
+        <button [matMenuTriggerFor]="languageMenu" mat-icon-button class="toolbar-main-menu"><mat-icon
+                style="color: rgb(2, 52, 2);">language</mat-icon></button>
+
+        <button matTooltip="Github Profile" (click)="goToGithub()" mat-icon-button class="toolbar-main-menu">
+            <img src="icons/github.svg" alt="Cambiar idioma" class="toolbar-icon">
+        </button>
+    </div>
+</mat-toolbar>
+<mat-divider></mat-divider>
+
+
+<mat-menu #languageMenu="matMenu">
+    <button mat-menu-item (click)="languageService.changeLanguage('ES')">
+        @if (languageService.currentLanguage() === 'ES') {
+        <mat-icon>check</mat-icon>
+        } @else {
+        <mat-icon></mat-icon>
+        }
+
+        <span>Español</span>
+    </button>
+
+    <button mat-menu-item (click)="languageService.changeLanguage('EN')">
+        @if (languageService.currentLanguage() === 'EN') {
+        <mat-icon>check</mat-icon>
+        } @else {
+        <mat-icon></mat-icon>
+        }
+
+        <span>English</span>
+    </button>
+</mat-menu>

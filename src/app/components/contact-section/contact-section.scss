@@ -1,0 +1,215 @@
+#contact {
+    --ink: #1f2937;
+    --ink-muted: #5b6472;
+    --line: #eaeaea;
+    --bg: #fbfffa;
+    --card-bg: #ffffff;
+    --tag-bg: #eff3fa;
+    --tag-color: #2563eb;
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
+    --shadow-hover: 0 12px 32px rgba(15, 23, 42, 0.12);
+
+    padding: 4rem 25px;
+    background: var(--bg);
+    margin: 0 auto 0rem;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--ink);
+}
+
+.contact-intro {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+
+.contact-title {
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    color: var(--ink);
+    margin: 0 0 0.5rem;
+}
+
+.contact-subtitle {
+    color: var(--ink-muted);
+    font-size: 1rem;
+    margin: 0;
+}
+
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    /* <- clave: apila las tarjetas verticalmente */
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    /* espacio entre tarjetas */
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+
+.form-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+
+    .form-header {
+        margin-bottom: 2rem;
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+
+        .divider {
+            width: 40px;
+            height: 3px;
+            background: #3f51b5;
+            border-radius: 2px;
+        }
+    }
+
+    .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .full-width {
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    // Estilo elegante para campos
+    ::ng-deep .mat-mdc-form-field-infix {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .submit-btn {
+        width: 100%;
+        height: 48px;
+        margin-top: 1rem;
+        background: #1a1a1a;
+        color: white;
+        border-radius: 10px;
+        font-weight: 500;
+        transition: background 0.3s ease;
+
+        &:hover {
+            background: #3f51b5;
+        }
+
+        &:disabled {
+            background: #e0e0e0;
+        }
+    }
+}
+
+
+.contact-grid {
+    display: grid;
+    // En móvil: una sola columna
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 8px;
+    width: 60%;
+
+    // En escritorio: activamos la rejilla de 12
+    @media (min-width: 600px) {
+        grid-template-columns: repeat(12, 1fr);
+
+        .field-col-6 {
+            grid-column: span 6;
+        }
+
+        .field-col-12 {
+            grid-column: span 12;
+        }
+
+        // Alineamos el botón a la izquierda en escritorio
+        .btn-submit {
+            grid-column: span 2; // Ocupa solo 2 espacios de 12
+            width: auto; // Ajusta su ancho al contenido
+            min-width: 150px; // Tamaño mínimo cómodo
+        }
+    }
+}
+
+
+.actions-wrapper {
+    grid-column: 1 / -1; // Ocupa todo el ancho
+    display: flex;
+    align-items: center;
+    justify-content: space-between; // Separa los botones (izquierda vs derecha)
+    gap: 16px;
+
+}
+
+.social-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-submit {
+    height: 50px;
+    min-width: 150px;
+}
+
+
+// En móvil, apilamos si es necesario, pero tú pediste "todo a la izquierda"
+@media (max-width: 600px) {
+    .contact-grid {
+        width: 90%;
+    }
+}
+
+
+
+.mat-mdc-button-base {
+    border-radius: 6px !important;
+    font-size: 15px;
+    font-family: 'Inter', Courier, monospace4;
+}
+
+::ng-deep .mat-mdc-form-field .mat-mdc-floating-label {
+    color: #08340a !important; // color azul
+    -webkit-background-clip: text;
+}
+
+::ng-deep .mat-mdc-text-field-wrapper {
+    background-color: rgb(255, 255, 255);
+    border: darkblue;
+}
+
+/* Cambiar el color al enfocar el input (opcional) */
+::ng-deep .mat-mdc-form-field.mat-focused .mdc-notched-outline .mdc-notched-outline__leading,
+::ng-deep .mat-mdc-form-field.mat-focused .mdc-notched-outline .mdc-notched-outline__notch,
+::ng-deep .mat-mdc-form-field.mat-focused .mdc-notched-outline .mdc-notched-outline__trailing {
+    border-color: rgb(53, 97, 30) !important;
+
+}
+
+
+::ng-deep .mat-mdc-form-field-error-wrapper {
+    padding: 0 !important;
+}
+
+:host ::ng-deep .spinner-green circle {
+    stroke: #2da701 !important;
+}
+
+:host ::ng-deep .spinner-white circle {
+    stroke: #ffffff !important;
+}

@@ -1,0 +1,180 @@
+<section id="projects" [sectionObserver]="'projects'">
+    <div class="projects-intro">
+        <h2 class="projects-title">{{'TOOLBAR.PROJECTS'| translate}}</h2>
+        <p class="projects-subtitle">{{'PROJECTS.SUBTITLE'| translate}}</p>
+    </div>
+
+    <div class="projects-container">
+        <mat-card class="project-card" appearance="outlined">
+            <mat-card-header>
+                <div mat-card-avatar class="project-header-image">
+                    <img src="https://albinjunliang.github.io/genq/rabbit.png" alt="GenQ logo">
+                </div>
+                <mat-card-title>GenQ</mat-card-title>
+                <mat-card-subtitle>{{'PROJECTS.GENQ_TITLE'|translate}}</mat-card-subtitle>
+            </mat-card-header>
+
+            <mat-card-content>
+                <p>
+                    {{'PROJECTS.GENQ_DESCRIPTION' | translate}}
+                </p>
+            </mat-card-content>
+
+            <app-slider class="project-slider" [slides]="slides1"></app-slider>
+
+
+            <div class="tech-tags">
+                <span class="tech-tag">
+                    <img src="icons/expressjs.svg" alt="Express JS" class="tech-icon">
+                    Express JS
+                </span>
+                <span class="tech-tag">
+                    <img src="icons/angular.svg" alt="Angular" class="tech-icon">
+                    Angular
+                </span>
+                <span class="tech-tag">
+                    <img src="icons/javascript.svg" alt="JavaScript" class="tech-icon">
+                    VanillaJS
+                </span>
+
+                <span class="tech-tag">
+                    <img src="icons/mysql.svg" alt="MySQL" class="tech-icon">
+                    MySQL
+                </span>
+
+
+                <span class="tech-tag">
+                    <img src="icons/docker.svg" alt="Docker" class="tech-icon">
+                    Docker
+                </span>
+
+
+                <span class="tech-tag">
+                    <img src="icons/sequelize.svg" alt="sequelize" class="tech-icon">
+                    Sequelize
+                </span>
+            </div>
+
+            <mat-card-actions>
+                <button (click)="goToLink('https://albinjunliang.github.io/genq')"
+                    mat-button>{{'PROJECTS.WEBSITE'|translate}}</button>
+                <button (click)="goToLink('https://github.com/AlbinJunLiang/genq')" mat-button class="github-btn">
+                    <span class="btn-content">
+                        <img src="icons/github.svg" alt="GitHub">
+                        <span>GITHUB</span>
+                    </span>
+                </button>
+            </mat-card-actions>
+        </mat-card>
+
+        <mat-card class="project-card project-card--reverse" appearance="outlined">
+            <mat-card-header>
+                <div mat-card-avatar class="project-header-image">
+                    <img src="https://albinjunliang.github.io/shapper/shapper_ico.png" alt="GenQ logo">
+                </div>
+                <mat-card-title>Shapper</mat-card-title>
+                <mat-card-subtitle>{{'PROJECTS.SHAPPER_TITLE'|translate}}</mat-card-subtitle>
+            </mat-card-header>
+
+            <mat-card-content>
+                <p>
+                    {{'PROJECTS.SHAPPER_DESCRIPTION'|translate}}
+                </p>
+            </mat-card-content>
+
+
+            <div class="tech-tags">
+                <span class="tech-tag">
+                    <img src="icons/dotnet.svg" alt="Dotnet" class="tech-icon">
+                    Dotnet 8
+                </span>
+                <span class="tech-tag">
+                    <img src="icons/angular.svg" alt="Angular" class="tech-icon">
+                    Angular
+                </span>
+                <span class="tech-tag">
+                    <img src="icons/sql-server.svg" alt="SQL Server" class="tech-icon">
+                    SQL Server
+                </span>
+                <span class="tech-tag">
+                    <img src="icons/tailwindcss.svg" alt="Tailwind CSS" class="tech-icon">
+                    Tailwind CSS
+                </span>
+            </div>
+
+            <app-slider class="project-slider" [slides]="slides2"></app-slider>
+
+
+            <mat-card-actions>
+                <button (click)="goToLink('https://albinjunliang.github.io/shapper')"
+                    mat-button>{{'PROJECTS.WEBSITE'|translate}}</button>
+                <button (click)="goToLink('https://github.com/AlbinJunLiang/shapper')" mat-button class="github-btn">
+                    <span class="btn-content">
+                        <img src="icons/github.svg" alt="GitHub">
+                        <span>GITHUB</span>
+                    </span>
+                </button>
+            </mat-card-actions>
+        </mat-card>
+
+
+        <mat-card class="project-card" appearance="outlined">
+            <mat-card-header>
+                <div mat-card-avatar class="project-header-image">
+                    <img src="https://albinjunliang.github.io/sweet-onion/logo.png" alt="GenQ logo">
+                </div>
+                <mat-card-title>SweetOnion</mat-card-title>
+                <mat-card-subtitle>{{'PROJECTS.SWEET_ONION_TITLE'|translate}}</mat-card-subtitle>
+            </mat-card-header>
+
+            <mat-card-content>
+                <p>
+                    {{'PROJECTS.SWEET_ONION_DESCRIPTION' | translate}}
+                </p>
+            </mat-card-content>
+
+            <app-slider class="project-slider" [slides]="slides3"></app-slider>
+
+
+            <div class="tech-tags">
+
+                <span class="tech-tag">
+                    <img src="icons/javascript.svg" alt="JavaScript" class="tech-icon">
+                    VanillaJS
+                </span>
+
+                <span class="tech-tag">
+                    <img src="icons/mongodb.svg" alt="MongoDB" class="tech-icon">
+                    MongoDB
+                </span>
+                <span class="tech-tag">
+                    <img src="icons/expressjs.svg" alt="Express JS" class="tech-icon">
+                    Express JS
+                </span>
+
+                <span class="tech-tag">
+                    <img src="icons/angular.svg" alt="Angular" class="tech-icon">
+                    Angular
+                </span>
+                <span class="tech-tag">
+                    <img src="icons/nodejs.svg" alt="nodejs" class="tech-icon">
+                    NodeJS
+                </span>
+
+            </div>
+
+            <mat-card-actions>
+                <button (click)="goToLink('https://albinjunliang.github.io/sweet-onion')"
+                    mat-button>{{'PROJECTS.WEBSITE'|translate}}</button>
+                <button (click)="goToLink('https://github.com/AlbinJunLiang/sweet-onion')" mat-button
+                    class="github-btn">
+                    <span class="btn-content">
+                        <img src="icons/github.svg" alt="GitHub">
+                        <span>GITHUB</span>
+                    </span>
+                </button>
+            </mat-card-actions>
+        </mat-card>
+
+    </div>
+</section>

@@ -1,0 +1,113 @@
+.hero-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.hero-content {
+  font-family: 'Inter', Courier, monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  max-width: 900px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+
+p {
+  font-family: 'Inter', sans-serif !important;
+
+}
+
+h3 {
+  font-size: 45px;
+  font-weight: bolder;
+  font-family: 'Inter', sans-serif !important;
+  user-select: none;
+  margin: 0;
+
+  background: linear-gradient(90deg,
+      #023402,
+      #22c55e,
+      #023402
+    );
+
+
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-flow 3s linear infinite;
+}
+
+.linkedin-button {
+    background: #ffffff;
+    color: rgb(10, 102, 194);
+    font-size: 16px;
+}
+
+.button-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.toolbar-icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin-top: -2px;
+
+}
+
+
+.cv-button {
+    color: #09761f !important;
+    background: #ffffff;
+
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cv-button mat-icon {
+    color: #055918;
+    font-size: 22px;
+    width: 22px;
+    height: 22px;
+}
+
+
+.mat-mdc-button-base {
+    border-radius: 0 !important;
+}
+
+:host ::ng-deep .spinner-green circle {
+  stroke: #2da701 !important;
+}
+
+
+@keyframes gradient-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 200% 50%;
+  }
+}

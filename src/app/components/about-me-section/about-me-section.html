@@ -1,0 +1,30 @@
+<section id="about" class="about-section" [sectionObserver]="'about'">
+    <div class="content-wrapper">
+        <app-tech-marquee style="width: 100%;"></app-tech-marquee>
+
+        <h2 class="title">{{'ABOUT_ME.TITLE' | translate}}</h2>
+
+        <p [hidden]="!languageService.isThisLanguage('ES')" class="description">
+            Soy Ingeniero de Software especializado en ecosistemas como <strong>.NET</strong>, <strong>Angular</strong>
+            y <strong>SQL Server</strong>. Cuento con experiencia en despliegue y gestión de datos mediante
+            <strong>Power BI</strong> y servicios en la nube de <strong>Azure</strong>. Me apasiona la
+            <strong>investigación y el desarrollo colaborativo</strong>, y como recién graduado en Informática
+            Empresarial (UCR, Sede
+            Caribe), me encuentro en búsqueda activa de una oportunidad laboral donde pueda aportar mi experiencia
+            técnica y seguir creciendo profesionalmente.
+        </p>
+
+
+        <p [hidden]="!languageService.isThisLanguage('EN')" class="description">
+            I am a Software Engineer specializing in ecosystems such as <strong>.NET</strong>, <strong>Angular</strong>,
+            and <strong>SQL Server</strong>, with hands-on experience in data deployment and management using
+            <strong>Power BI</strong> and <strong>Azure</strong> cloud services. I am driven by <strong>research and
+                collaborative development</strong>. As a recent graduate in Business Informatics from the UCR (Caribbean
+            Campus), I
+            am actively seeking new professional opportunities where I can apply my technical expertise and continue to
+            grow.
+        </p>
+
+
+    </div>
+</section>

@@ -1,0 +1,140 @@
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    /* Móvil primero (apilado) */
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1rem;
+    text-align: center;
+    gap: 2rem;
+    min-height: 60vh;
+    background: #ffffff;
+}
+
+h2 {
+    font-family: 'Inter', sans-serif !important;
+
+}
+
+.hero-content h3 {
+    font-size: 55px;
+    font-weight: bolder;
+    font-family: 'Inter', sans-serif !important;
+    user-select: none;
+    margin: 0;
+
+    background: linear-gradient(90deg,
+            #023402,
+            #22c55e,
+            #023402);
+
+
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradient-flow 3s linear infinite;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    color: #2e2d2d;
+    font-family: 'Inter', sans-serif !important;
+
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: 500px;
+}
+
+
+.linkedin-button {
+    background: #ffffff;
+    color: rgb(10, 102, 194);
+    font-size: 16px;
+}
+
+.button-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.toolbar-icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin-top: -2px;
+
+}
+
+
+.cv-button {
+    color: #09761f !important;
+    background: #ffffff;
+
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cv-button mat-icon {
+    color: #055918;
+    font-size: 22px;
+    width: 22px;
+    height: 22px;
+}
+
+
+.mat-mdc-button-base {
+    border-radius: 0 !important;
+}
+
+:host ::ng-deep .spinner-green circle {
+  stroke: #2da701 !important;
+}
+
+/* Escritorio: Cambiar a dos columnas */
+@media (min-width: 960px) {
+    .hero-container {
+        flex-direction: row;
+        /* Lado a lado */
+        text-align: left;
+        padding: 4rem 10%;
+    }
+
+    .hero-content {
+        flex: 1;
+    }
+
+    .hero-actions {
+        justify-content: flex-start;
+    }
+
+    .hero-image {
+        flex: 1;
+    }
+
+}
+
+
+@media (max-width: 980px) {
+  
+.hero-image img {
+    max-width: 100%;
+    height: 220px;
+}
+}
+

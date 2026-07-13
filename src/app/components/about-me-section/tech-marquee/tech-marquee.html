@@ -1,0 +1,16 @@
+<div class="marquee-wrapper">
+    <h3 class="marquee-title">{{'ABOUT_ME.TECH_STACK' | translate}}</h3>
+    <div class="marquee">
+        <div class="marquee-track">
+
+            @for (icon of techStack; track icon.name) {
+            <img [src]="icon.path" [alt]="icon.name">
+            }
+
+            @for (icon of techStack; track icon.name + '-clone') {
+            <img [src]="icon.path" [alt]="icon.name">
+            }
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,119 @@
+<section id="contact" [sectionObserver]="'contact'">
+    <div class="contact-intro">
+        <h2 class="contact-title">{{'CONTACT.TITLE'|translate}}</h2>
+        <p class="contact-subtitle">{{'CONTACT.DESCRIPTION'|translate}}</p>
+    </div>
+
+    <div class="contact-container">
+
+        <form [formGroup]="contactForm" (ngSubmit)="submitForm()" class="contact-grid">
+
+            <mat-form-field appearance="outline" class="field-col-6">
+                <mat-label>{{'CONTACT.NAME'|translate}}</mat-label>
+                <input matInput formControlName="name" />
+
+                @let name = contactForm.get('name');
+
+                @if (name?.hasError('maxlength')) {
+                <mat-error style="width: 100%"> {{ 'CONTACT.MAX_LENGTH' | translate:{ max: 300 } }}
+                </mat-error>
+                }
+
+
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="field-col-6">
+                <mat-label>{{'CONTACT.EMAIL'|translate}}</mat-label>
+                <input matInput formControlName="email" />
+
+                @let emailCtrl = contactForm.get('email');
+
+                @if (emailCtrl?.hasError('required')) {
+                <mat-error style="width: 100%">{{'CONTACT.EMAIL_REQUIRED'| translate}}</mat-error>
+                }
+
+                @if (emailCtrl?.hasError('email')) {
+                <mat-error style="width: 100%">{{'CONTACT.EMAIL_FORMAT'| translate}}</mat-error>
+                }
+
+                @if (emailCtrl?.hasError('maxLength')) {
+                <mat-error style="width: 100%"> {{ 'CONTACT.MAX_LENGTH' | translate:{ max: 300 } }}
+                </mat-error>
+
+                }
+
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="field-col-12">
+                <mat-label>{{'CONTACT.SUBJECT'|translate}}</mat-label>
+                <input matInput formControlName="subject" />
+
+
+
+                @let subject = contactForm.get('subject');
+
+                @if (subject?.hasError('required')) {
+                <mat-error>
+                    {{ 'CONTACT.REQUIRED' | translate:{ field: ('CONTACT.SUBJECT' | translate) } }}
+                </mat-error>
+                }
+                @if (subject?.hasError('maxLength')) {
+                <mat-error style="width: 100%"> {{ 'CONTACT.MAX_LENGTH' | translate:{ max: 300 } }}
+                </mat-error>
+                }
+
+
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="field-col-12">
+                <mat-label>{{'CONTACT.MESSAGE'|translate}}</mat-label>
+                <textarea matInput formControlName="message" rows="4"></textarea>
+
+
+                @let message = contactForm.get('message');
+
+                @if (message?.hasError('maxlength')) {
+                <mat-error style="width: 100%"> {{ 'CONTACT.MAX_LENGTH' | translate:{ max: 500 } }}
+                </mat-error>
+                }
+
+                @if (message?.hasError('required')) {
+                <mat-error>
+                    {{ 'CONTACT.REQUIRED' | translate:{ field: ('CONTACT.MESSAGE' | translate) } }}
+                </mat-error>
+                }
+
+            </mat-form-field>
+
+            <div class="actions-wrapper">
+                <button style="background-color: rgb(30, 30, 30);" mat-flat-button color="primary" type="submit"
+                    class="btn-submit">
+                    @if(isSending()){
+                    <mat-spinner class="spinner-white" diameter="20"></mat-spinner>
+                    }@else{
+                    {{'CONTACT.SEND_ME'|translate}}
+
+                    }
+                </button>
+
+                <div class="social-buttons">
+                    <button (click)="goToLink('https://github.com/AlbinJunLiang')" mat-icon-button
+                        aria-label="LinkedIn">
+                        <img src="icons/github.svg" alt="Github link">
+                    </button>
+                    <button (click)="goToLink('https://www.linkedin.com/in/albin-liang-878140232/')" mat-icon-button
+                        aria-label="GitHub">
+                        <img src="icons/linkedin.svg" alt="Linkedin link">
+                    </button>
+                </div>
+            </div>
+        </form>
+
+
+
+    </div>
+
+
+
+
+</section>

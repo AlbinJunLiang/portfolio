@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Convertir PDF a Base64</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        textarea { width: 100%; height: 200px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <h2>Conversor de PDF a Base64</h2>
+    <input type="file" id="pdfInput" accept="application/pdf">
+    
+    <h3>Resultado en Base64:</h3>
+    <textarea id="output" readonly placeholder="Aquí aparecerá el código..."></textarea>
+    
+    <script>
+        const input = document.getElementById('pdfInput');
+        const output = document.getElementById('output');
+
+        input.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            
+            reader.onload = (event) => {
+                // event.target.result contiene todo el string
+                // .split(',')[1] elimina el encabezado "data:application/pdf;base64,"
+                const base64Only = event.target.result.split(',')[1];
+                output.value = base64Only;
+            };
+
+            reader.readAsDataURL(file);
+        });
+    </script>
+</body>
+</html>
