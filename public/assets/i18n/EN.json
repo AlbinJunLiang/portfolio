@@ -58,7 +58,7 @@
     "NAME": "Name",
     "EMAIL": "Email",
     "SUBJECT": "Subject",
-    "MESSAGE": "Your message",
+    "MESSAGE": "Message",
     "SEND_ME": "Send message!",
     "EMAIL_REQUIRED": "Your Email is required.",
     "EMAIL_FORMAT": "The Email is invalid.",
